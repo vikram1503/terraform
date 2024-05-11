@@ -1,3 +1,4 @@
+# ec2 variables
 variable "instance_names"{
     default = ["db","backend","frontend"]
 }     
@@ -22,6 +23,8 @@ variable "common_tags" {
     }
 }
 
+# sg_variables
+
 variable "sg_name" {
     default = "allow_ssh"
 }
@@ -43,4 +46,13 @@ variable "protocol" {
 variable "allowed_cidr" {
     type = list
     default = ["0.0.0.0/0"]
+}
+
+# r53_variables
+variable "zone_id" {
+    default = "Z01109981TZN8CSWE7N4F"
+}
+
+variable "domain_name" {
+    default = "imvicky.online"
 }
